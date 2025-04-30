@@ -1,0 +1,21 @@
+import objetos.*
+import game.*
+
+describe "test taquito"{
+    
+    method initialize(){
+        game.width(15)
+	    game.height(10)
+    }
+
+    test "test de taquito"{
+        assert.notEquals(pelota.position(), lionel.position())
+        lionel.avanzar()
+        lionel.avanzar()
+        assert.equals(pelota.position(), lionel.position())
+        lionel.taquito()
+        assert.notEquals(pelota.position(), lionel.position())
+
+        
+    }
+}
