@@ -16,6 +16,12 @@ object lionel {
 	method avanzar() {
 		position = game.at((game.width() - 1).min(position.x() + 1), position.y()) 
 	}
+
+	method patear () {
+		if(position == pelota.position()) {
+			pelota.position(game.at((pelota.position().x() + 3).min(game.width() - 1), pelota.position().y()))
+		}
+	}
 	
 }
 
