@@ -1,0 +1,7 @@
+import objetos.*
+
+
+test "inicio" {
+    pelota.inicio()
+    assert.equals(game.at(0,5), pelota.position())
+}
