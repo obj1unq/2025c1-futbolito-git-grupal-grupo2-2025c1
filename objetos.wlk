@@ -18,6 +18,12 @@ object lionel {
 		position = game.at((game.width() - 1).min(position.x() + 1), position.y()) 
 	}
 
+	method patear () {
+		if(position == pelota.position()) {
+			pelota.position(game.at((pelota.position().x() + 3).min(game.width() - 1), pelota.position().y()))
+		}
+	}
+
 	method estaEnUnaEsquina() {
 		return (self.position().x() == 0 || self.position().x() == 14 || self.position().y() == 0 || self.position().y() == 10)
 	}
